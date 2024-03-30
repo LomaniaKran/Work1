@@ -173,4 +173,5 @@ elif task == "3":
     print(answer)
 
 else:
+
     print("Нет такого задания.")
