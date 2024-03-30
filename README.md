@@ -1,6 +1,7 @@
 task = input("Выберите задание: ")
 
 if task == "1":
+
     print("\nВведите 2 числа: ")
     num1 = int(input())
     num2 = int(input())
