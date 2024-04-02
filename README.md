@@ -5,6 +5,21 @@ if task == "1":
     print("\nВведите 2 числа: ")
     num1 = int(input())
     num2 = int(input())
+
+    x1 = num1.isdigit()
+    x2 = num2.isdigit()
+    
+    while (x1 == False) or (x2 == False):
+        print("\nВведённые значения не удовлетворяют условиям.")
+        print("\nВведите 2 числа: ")
+        num1 = input()
+        num2 = input()
+        
+        x1 = num1.isdigit()
+        x2 = num2.isdigit()
+    
+    num1 = int(num1)
+    num2 = int(num2)
     
     print(f"\nВы ввели числа: {num1} и {num2}")
     action = input("Выберите действие: \n 1. Сложение \n 2. Вычитание \n 3. Умножение \n 4. Деление\n")
@@ -147,15 +162,15 @@ elif task == "2":
             print("\nВнезапное головокружение сбивает вас с мысли. С трудом удержав равновесие, вы возвращаетесь к выбору.")
 
 elif task == "3":
-    check = False
+    num3 = input("\nВведите двузначное число: \n")
+    x3 = num3.isdigit()
     
-    while check == False:
-        num3 = int(input("Введите двузначное число: \n"))
-        
-        if (num3 >= 100) or (num3 < 10):
-            print("Число не удовлетворяет условию задачи")
-        else:
-            check = True
+    while (x3 == False) or ((int(num3) >= 100) or (int(num3) < 10)):
+        print("\nВведённое значение не удовлетворяет условию задачи")
+        num3 = input("\nВведите двузначное число: \n")
+        x3 = num3.isdigit()
+    
+    num3 = int(num3)
     
     num3_2 = num3 % 10
     num3_1 = (num3 - num3_2) / 10
